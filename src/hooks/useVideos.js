@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import youtube from "../apis/youtube";
+// import .env from "../env"
 
-const KEY = "AIzaSyBkGrz-7ITMbdVDSxDy8mvOekvFu1DVwPk";
+const KEY = `${process.env.REACT_APP_API_KEY}`;
 
 const useVideos = (defaultSearchTerm) => {
   const [videos, setVideos] = useState([]);
